@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - node
+env:
+  - PACKAGE=react-redux-form-materialize
+script: lerna run test --scope $PACKAGE

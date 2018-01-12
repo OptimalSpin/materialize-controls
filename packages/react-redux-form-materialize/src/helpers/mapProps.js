@@ -1,3 +1,3 @@
 export default {
-    innerState: (props) => props.fieldValue
-}
+  innerState: props => props.fieldValue,
+};

@@ -1,21 +1,22 @@
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const path = require('path')
-const nodeExternals = require('webpack-node-externals')
+/* eslint-disable no-unused-vars,import/no-extraneous-dependencies */
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
-const baseConfig = require('./webpack.base.config')
-const {babelLoaderConfig} = require('./webpack.base.config')
+const baseConfig = require('./webpack.base.config');
+const { babelLoaderConfig } = require('./webpack.base.config');
 
-const TEST_PATH = path.join(__dirname, 'test')
+const TEST_PATH = path.join(__dirname, 'spec');
 
-babelLoaderConfig.include.push(TEST_PATH)
+babelLoaderConfig.include.push(TEST_PATH);
 
 module.exports = merge(baseConfig, {
-    target: 'node',
-    externals: [nodeExternals()],
-    module: {
-        loaders: [
-            babelLoaderConfig
-        ]
-    }
-})
+  target: 'node',
+  externals: [nodeExternals()],
+  module: {
+    loaders: [
+      babelLoaderConfig,
+    ],
+  },
+});

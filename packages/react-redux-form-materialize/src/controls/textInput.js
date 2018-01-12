@@ -1,47 +1,48 @@
-import React from 'react'
-import cn from 'classnames'
-import omit from 'lodash/omit'
-import PropTypes from 'prop-types'
+import React from 'react';
+import cn from 'classnames';
+import omit from 'lodash/omit';
+import PropTypes from 'prop-types';
 
-import {getErrors, getIconColor, getLabelClassName} from '../helpers/inputHelpers'
+import { getErrors, getIconColor, getLabelClassName } from '../helpers/inputHelpers';
 
 const TextInput = (props) => {
-    const errors = getErrors(props)
-    
-    const fieldClassName = cn('input-field', props.className)
+  const errors = getErrors(props);
 
-    const iconColor = getIconColor(props)
+  const fieldClassName = cn('input-field', props.className);
 
-    const inputClassName = cn('validate', {
-        'invalid': errors.length
-    })
+  const iconColor = getIconColor(props);
 
-    const labelClassName = getLabelClassName(props, errors)
+  const inputClassName = cn('validate', {
+    invalid: errors.length,
+  });
 
-    const inputProps = omit(props, ['placeholder', 'innerState', 'iconPrefix',
-        'className', 'messages', 'iconFactory', 'type', 'inputType'])
+  const labelClassName = getLabelClassName(props, errors);
 
-    return (
-        <div className={fieldClassName}>
-            {
-                (() => {
-                    if(props.iconPrefix){
-                        const PrefixIcon = props.iconFactory(props.iconPrefix)
-                        return <PrefixIcon className="prefix" color={iconColor}/>
-                    }
-                })()
-            }
-            <input {...inputProps} type={props.inputType || props.type} className={inputClassName}/>
-            <label htmlFor={props.id} className={labelClassName} data-error={errors}>{props.placeholder}</label>
-        </div>
-    )
-}
+  const inputProps = omit(props, ['placeholder', 'innerState', 'iconPrefix',
+    'className', 'messages', 'iconFactory', 'type', 'inputType']);
+
+  const PrefixIcon = props.iconPrefix
+    ? props.iconFactory(props.iconPrefix)
+    : undefined;
+
+  return (
+    <div className={fieldClassName}>
+      {PrefixIcon &&
+      <PrefixIcon className="prefix" color={iconColor}/>
+      }
+      <input {...inputProps} type={props.inputType || props.type} className={inputClassName}/>
+      <label htmlFor={props.id} className={labelClassName} data-error={errors}>
+        {props.placeholder}
+      </label>
+    </div>
+  );
+};
 
 TextInput.propTypes = {
-    innerState: PropTypes.object.isRequired,
-    iconPrefix: PropTypes.string,
-    iconFactory: PropTypes.func,
-    messages: PropTypes.object
-}
+  innerState: PropTypes.object.isRequired,
+  iconPrefix: PropTypes.string,
+  iconFactory: PropTypes.func,
+  messages: PropTypes.object,
+};
 
-export default TextInput
+export default TextInput;

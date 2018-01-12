@@ -7,11 +7,13 @@
   },
   "license": "MIT",
   "repository": "https://github.com/OptimalSpin/materialize-controls",
-  "author": "OptimalSpin",
+  "author": "OptimalSpin <nikita@optimalspin.com>",
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
     "init": "npm install && lerna bootstrap --hoist",
     "publish": "lerna publish",
+    "build": "lerna run build",
+    "test": "lerna run test",
     "lint:js": "eslint . --fix",
     "lint:ts": "tslint --fix packages/*/src/**/*.ts",
     "lint:css": "stylelint --fix packages/**/src/**/*.scss",
@@ -56,5 +58,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "dependencies": {}
 }
