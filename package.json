@@ -1,0 +1,60 @@
+{
+  "name": "materialize-controls",
+  "description": "A collection of Material controls that work seamlessly with React Redux Form",
+  "private": false,
+  "engines": {
+    "node": "8.9.1"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OptimalSpin/materialize-controls",
+  "author": "OptimalSpin",
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
+    "init": "npm install && lerna bootstrap --hoist",
+    "publish": "lerna publish",
+    "lint:js": "eslint . --fix",
+    "lint:ts": "tslint --fix packages/*/src/**/*.ts",
+    "lint:css": "stylelint --fix packages/**/src/**/*.scss",
+    "cm": "git add -A && git-cz",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint . --fix"
+    ],
+    "*.ts": [
+      "tslint --fix packages/*/src/**/*.ts"
+    ],
+    "*.scss": [
+      "stylelint --fix packages/**/src/**/*.scss"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.5.1",
+    "husky": "^0.14.3",
+    "lerna": "^2.5.1",
+    "lerna-changelog": "^0.7.0",
+    "lint-staged": "^6.0.0",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0",
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.4.2",
+    "typescript": "^2.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
