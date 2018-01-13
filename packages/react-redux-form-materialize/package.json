@@ -1,6 +1,6 @@
 {
   "name": "react-redux-form-materialize",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Basic input controls for react-redux-form leveraged by Materialize Material UI framework",
   "main": "lib/index.js",
   "repository": "https://github.com/OptimalSpin/materialize-controls",
@@ -10,9 +10,7 @@
     "start": "npm run build",
     "build": "cross-env NODE_ENV=production babel src --out-dir lib",
     "build:watch": "babel -w src --out-dir lib",
-    "test": "mocha --compilers js:babel-core/register spec --recursive",
-    "test1": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 mocha-webpack --webpack-config webpack.test.config.js --require babel-polyfill test --recursive",
-    "test1:watch": "npm run test -- --watch"
+    "test": "mocha --compilers js:babel-core/register spec --recursive"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -31,7 +29,6 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
     "babel-plugin-lodash": "^3.2.11",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
@@ -45,9 +42,6 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "mocha": "^4.1.0",
     "mocha-webpack": "^1.0.1",
-    "react-addons-test-utils": "^15.6.2",
-    "webpack": "^3.10.0",
-    "webpack-merge": "^4.1.1",
-    "webpack-node-externals": "^1.6.0"
+    "react-addons-test-utils": "^15.6.2"
   }
 }
