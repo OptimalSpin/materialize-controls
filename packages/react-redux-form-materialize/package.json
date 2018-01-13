@@ -1,6 +1,6 @@
 {
   "name": "react-redux-form-materialize",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Basic input controls for react-redux-form leveraged by Materialize Material UI framework",
   "main": "lib/index.js",
   "repository": "https://github.com/OptimalSpin/materialize-controls",
