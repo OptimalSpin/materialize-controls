@@ -67,6 +67,9 @@ class MyForm extends React.Component {
 export default MyForm
 ```
 
+**react-redux-form-materialize-extra** provides more advanced controls like DatePicker (base on popular [React Infinite Calendar](https://github.com/clauderic/react-infinite-calendar)) 
+and AutocompleteInput (based on [React Autosuggest](https://github.com/moroshko/react-autosuggest) )  
+
 ##Validation
 **TextInput**, **TextArea**, **DropdownInput** supports React Redux Form validation and can be used in conjunction with [React Intl](https://github.com/yahoo/react-intl) to provide internalized error messages (set *messages* property for that purpose).
 

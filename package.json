@@ -12,6 +12,7 @@
     "bootstrap": "lerna bootstrap --hoist",
     "init": "npm install && lerna bootstrap --hoist",
     "publish": "lerna publish",
+    "install:independent": "cd packages/react-redux-form-materialize && npm install && cd ../react-redux-form-materialize-extra && npm install",
     "build": "lerna run build",
     "test": "lerna run test",
     "lint:js": "eslint . --fix",
