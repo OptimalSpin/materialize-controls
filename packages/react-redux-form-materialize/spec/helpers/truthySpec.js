@@ -1,20 +1,18 @@
 import chai from 'chai';
-import chaiGenerator from 'chai-generator';
 
 import getTruthyProps from '../../src/helpers/truthyProps';
 
-chai.use(chaiGenerator);
 const { expect } = chai;
 
 describe('Truthy helper', () => {
-  it('should return an iterator', () => {
+  it('should return an array', () => {
     const obj = {
       truthy: true,
     };
     const result = getTruthyProps(obj);
-    expect(result).to.deep.yield(['truthy', true]);
+    expect(result).to.be.an('array');
   });
-  it('should return an iterator with only truthy values', () => {
+  it('should return an array with only truthy values', () => {
     const obj = {
       truthy: true,
       truthy1: '1',
@@ -22,8 +20,6 @@ describe('Truthy helper', () => {
       falsy0: 0,
     };
     const result = getTruthyProps(obj);
-    expect(result).to.deep.yield(['truthy', true]);
-    expect(result).to.deep.yield(['truthy1', '1']);
-    expect(result).to.return(undefined);
+    expect(result).to.deep.equal([true, '1']);
   });
 });
