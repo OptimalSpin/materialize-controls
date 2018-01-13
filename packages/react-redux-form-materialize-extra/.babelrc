@@ -1,0 +1,14 @@
+{
+  "presets": ["stage-1", "react", ["env", {
+    "targets": {
+      "node": "current"
+    }
+  }]],
+  "sourceMaps": "inline",
+  "plugins": [
+    ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }]
+  ]
+}

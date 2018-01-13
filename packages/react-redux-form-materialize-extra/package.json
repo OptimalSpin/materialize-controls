@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-form-materialize",
+  "name": "react-redux-form-materialize-extra",
   "version": "1.0.6",
-  "description": "Basic input controls for react-redux-form leveraged by Materialize Material UI framework",
+  "description": "Advanced input controls for react-redux-form leveraged by Materialize Material UI frameworkand some other libraries",
   "main": "lib/index.js",
   "repository": "https://github.com/OptimalSpin/materialize-controls",
   "author": "OptimalSpin <nikita@optimalspin.com>",
@@ -16,9 +16,13 @@
     "classnames": "^2.2.5",
     "cross-env": "^5.1.3",
     "lodash": "^4.17.4",
+    "moment": "^2.20.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-autosuggest": "^9.3.2",
+    "react-dom": "^16.2.0",
+    "react-infinite-calendar": "^2.3.1",
+    "react-redux-form-materialize": "^1.0.6"
   },
   "peerDependencies": {
     "materialize-css": "^0.100.2",
