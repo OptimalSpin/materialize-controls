@@ -2,9 +2,9 @@
 
 Material UI controls that you can use with React Redux Form
 
-[![Build Status](https://travis-ci.org/nasushkov/react-redux-form-materialize.svg?branch=master)](https://travis-ci.org/nasushkov/react-redux-form-materialize)
+[![Build Status](https://travis-ci.org/OptimalSpin/materialize-controls.svg?branch=master)](https://github.com/OptimalSpin/materialize-controls)
 
-Material input controls for the second popular React/Redux library for a form manipulation [React Redux Form](https://github.com/davidkpiano/react-redux-form) 
+These controls support second popular React/Redux library for a form manipulation [React Redux Form](https://github.com/davidkpiano/react-redux-form) 
 leveraged by [Materialize](https://github.com/Dogfalo/materialize) Material UI CSS framework under the hood. It does not use any js code from Materialize since 
 it is tightly coupled with jQuery.  
 
@@ -20,6 +20,12 @@ npm install react-redux-form-materialize@latest --save
 ```
 
 ##Controls
+
+Currently there are two separate packages:
+
+ * react-redux-form-materialize which contains basic controls
+ * react-redux-form-materialize-extra which contains more complicated and opinionated controls like AutoComplete and DatePicker
+
 Currently this package supports several basic controls which are based on Materialize styles: **TextInput**, **TextArea**, **DropdownInput**, **CheckedInput** (used both for radio and checkbox), **FileInput** and **SwitcherInput**.
 You can use each control as a *component* property of an appropriate react-redux-form *Control* component. For some controls (**TextInput**, **TextArea**, **DropdownInput** and **FileInput**) 
 you should also provide *mapProps* property which is included in this package (it is used to connect some internals of React Redux Form). Here is a full example:
