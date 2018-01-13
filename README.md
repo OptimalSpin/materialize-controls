@@ -26,7 +26,7 @@ Currently there are two separate packages:
  * react-redux-form-materialize which contains basic controls
  * react-redux-form-materialize-extra which contains more complicated and opinionated controls like AutoComplete and DatePicker
 
-Currently this package supports several basic controls which are based on Materialize styles: **TextInput**, **TextArea**, **DropdownInput**, **CheckedInput** (used both for radio and checkbox), **FileInput** and **SwitcherInput**.
+**react-redux-form-materialize** provides several basic controls which are based on Materialize styles: **TextInput**, **TextArea**, **DropdownInput**, **CheckedInput** (used both for radio and checkbox), **FileInput** and **SwitcherInput**.
 You can use each control as a *component* property of an appropriate react-redux-form *Control* component. For some controls (**TextInput**, **TextArea**, **DropdownInput** and **FileInput**) 
 you should also provide *mapProps* property which is included in this package (it is used to connect some internals of React Redux Form). Here is a full example:
 
