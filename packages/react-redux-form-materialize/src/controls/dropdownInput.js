@@ -92,6 +92,10 @@ export default class DropdownInput extends React.Component {
     this.props.onChange(value);
   }
 
+  onPreventPropagation(evnt) {
+    evnt.stopPropagation();
+  }
+
   render() {
     const { props } = this;
     const { showSelect } = this.state;
@@ -153,7 +157,7 @@ export default class DropdownInput extends React.Component {
         {PrefixIcon &&
         <PrefixIcon style={{ left: '0px' }} className="prefix" color={iconColor}/>
         }
-        <div className={selectWrapperClassName}>
+        <div className={selectWrapperClassName} onMouseDown={this.onPreventPropagation}>
           {this.props.caret}
           <input type="text"
                  className={inputClassName}
