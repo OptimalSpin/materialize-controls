@@ -80,8 +80,8 @@ describe('TextInput', () => {
     expect(enzymeWrapper.find('[className="input-field"]').children()).to.have.length(3);
   });
 
-  // it('should add data-error attribute for error messages', () => {
-  //   const { enzymeWrapper } = setupTouched();
-  //   expect(enzymeWrapper.find('label')).to.have.data('error', 'Required!');
-  // });
+  it('should add data-error attribute for error messages', () => {
+    const { enzymeWrapper } = setupTouched();
+    expect(enzymeWrapper.find('label')).to.have.data('error', 'Required!');
+  });
 });

@@ -5,8 +5,10 @@ import getTruthyProps from '../helpers/truthyProps';
 
 export const getErrors = ({ innerState, messages }) => {
   if (innerState.touched) {
-    return Array.from(getTruthyProps(innerState.errors || {}))
-      .map(val => messages[val[1]])
+    const errorList = getTruthyProps(innerState.errors || {});
+
+    return errorList
+      .map(val => messages[val])
       .join(', ');
   }
 

@@ -52,8 +52,8 @@ describe('TextArea', () => {
     expect(enzymeWrapper).to.have.length(1);
   });
 
-  // it('should add data-error attribute for error messages', () => {
-  //   const { enzymeWrapper } = setupTouched();
-  //   expect(enzymeWrapper.find('label')).to.have.data('error', 'Required!');
-  // });
+  it('should add data-error attribute for error messages', () => {
+    const { enzymeWrapper } = setupTouched();
+    expect(enzymeWrapper.find('label')).to.have.data('error', 'Required!');
+  });
 });

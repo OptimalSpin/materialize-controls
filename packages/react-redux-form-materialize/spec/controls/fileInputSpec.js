@@ -36,8 +36,8 @@ describe('FileInput', () => {
     expect(enzymeWrapper).to.have.length(1);
   });
 
-  // it('should populate inner text input', () => {
-  //   const { enzymeWrapper } = setupNew();
-  //   expect(enzymeWrapper.find('input[type="text"]')).to.have.value('file.png');
-  // });
+  it('should populate inner text input', () => {
+    const { enzymeWrapper } = setupNew();
+    expect(enzymeWrapper.find('input[type="text"]')).to.have.value('file.png');
+  });
 });
