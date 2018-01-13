@@ -92,7 +92,7 @@ export default class DropdownInput extends React.Component {
     this.props.onChange(value);
   }
 
-  onPreventPropagation(evnt) {
+  static onPreventPropagation(evnt) {
     evnt.stopPropagation();
   }
 
