@@ -5,7 +5,7 @@ import TextInput from './controls/textInput';
 import SwitcherInput from './controls/switcherInput';
 import DropdownInput from './controls/dropdownInput';
 import mapProps from './helpers/mapProps';
-import inputHelpers from './helpers/inputHelpers';
+import { getErrors, getIconColor, getLabelClassName } from './helpers/inputHelpers';
 
 export {
   CheckedInput,
@@ -15,5 +15,7 @@ export {
   SwitcherInput,
   DropdownInput,
   mapProps,
-  inputHelpers,
+  getErrors,
+  getIconColor,
+  getLabelClassName,
 };
