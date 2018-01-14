@@ -27,6 +27,6 @@ export const getIconColor = ({
     : defaultIconColor || DEFAULT_COLOR;
 };
 
-export const getLabelClassName = ({ innerState }, errors) => (cn({
-  active: innerState.focus || innerState.value || errors.length,
+export const getLabelClassName = ({ innerState, value }, errors) => (cn({
+  active: innerState.focus || innerState.value || errors.length || value,
 }));
