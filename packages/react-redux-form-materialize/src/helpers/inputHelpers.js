@@ -28,5 +28,5 @@ export const getIconColor = ({
 };
 
 export const getLabelClassName = ({ innerState, value }, errors) => (cn({
-  active: innerState.focus || innerState.value || errors.length || value,
+  active: innerState.focus || innerState.value || errors.length || value || value === 0,
 }));
